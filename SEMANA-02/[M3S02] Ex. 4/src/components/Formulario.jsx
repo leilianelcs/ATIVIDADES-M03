@@ -1,12 +1,20 @@
 import "./formulario.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useFormContext } from '../context/FormContext';
 
 const Formulario = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { formData, updateFormData } = useFormContext();
   const [confirmationMessage, setConfirmationMessage] = useState("");
 
+  useEffect(() => {
+    // Preenche os campos com os dados do contexto
+    reset(formData);
+  }, [formData, reset]);
+
   const onSubmit = (data) => {
+    updateFormData(data); // Atualiza os dados no contexto
     setConfirmationMessage(`Cadastro realizado com sucesso! Nome: ${data.name}, Email: ${data.email}`);
     reset();
   };

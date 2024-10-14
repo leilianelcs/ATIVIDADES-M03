@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Formulario from './formulario/formulario'
+import React from 'react';
+import { FormProvider } from './context/FormContext';
+import Formulario from './components/Formulario';
+
 
 function App() {
-  const [form, setForm] = useState(0)
-
   return (
-    <>
-      <Formulario/>
-    </>
-  )
+    <FormProvider>
+      <div>
+        <Formulario />
+      </div>
+    </FormProvider>
+  );
 }
 
-export default App
+export default App;
