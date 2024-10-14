@@ -1,10 +1,12 @@
 import "./formulario.css";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTheme } from './ThemeContext'; 
 
 const Formulario = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [confirmationMessage, setConfirmationMessage] = useState("");
+  const { theme } = useTheme();
 
   const onSubmit = (data) => {
     setConfirmationMessage(`Cadastro realizado com sucesso! Nome: ${data.name}, Email: ${data.email}`);
@@ -12,7 +14,7 @@ const Formulario = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={theme}>
       <div>
         <h1>Formulário</h1>
         

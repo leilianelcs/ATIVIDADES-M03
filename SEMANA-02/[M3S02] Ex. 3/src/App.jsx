@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import Formulario from './formulario/formulario'
+import React from 'react';
+import { ThemeProvider } from './components/ThemeContext'; // Atualize o caminho conforme necessário
+import Formulario from './components/formulario';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
-  const [form, setForm] = useState(0)
-
   return (
-    <>
-      <Formulario/>
-    </>
-  )
+    <ThemeProvider>
+      <div>
+        <ThemeToggle />
+        <Formulario />
+      </div>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
