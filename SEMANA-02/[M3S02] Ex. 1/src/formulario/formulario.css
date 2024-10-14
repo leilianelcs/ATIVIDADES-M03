@@ -7,11 +7,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #0c0b0b;
+    color: #0b0b0c;
 }
 
 form {
-    background-color: #3d3939;
+    background-color: #6e6891;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(235, 217, 217, 0.1);

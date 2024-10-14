@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./toDoList.css";
 
-const TodoList = () => {
+const ToDoList = () => {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState("");
 
@@ -19,14 +20,13 @@ const TodoList = () => {
 
   const addTask = () => {
     if (task.trim()) {
-      setTasks([...tasks, task]);
+      setTasks((prevTasks) => [...prevTasks, task]);
       setTask("");
     }
   };
 
   const removeTask = (index) => {
-    const newTasks = tasks.filter((_, i) => i !== index);
-    setTasks(newTasks);
+    setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
   };
 
   return (
@@ -51,4 +51,4 @@ const TodoList = () => {
   );
 };
 
-export default TodoList;
+export default ToDoList;
