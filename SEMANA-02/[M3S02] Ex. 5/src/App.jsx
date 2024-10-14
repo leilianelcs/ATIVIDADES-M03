@@ -1,15 +1,14 @@
-import { useState } from 'react'
+import React from 'react';
+
 import './App.css'
-import Formulario from './formulario/formulario'
+import Contador from './components/Contador';
 
 function App() {
-  const [form, setForm] = useState(0)
-
   return (
-    <>
-      <Formulario/>
-    </>
-  )
+    <div className="App">
+      <Contador />
+    </div>
+  );
 }
 
-export default App
+export default App;
