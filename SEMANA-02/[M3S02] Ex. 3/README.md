@@ -1,8 +1,7 @@
-# React + Vite
+### [M3S02] Ex. 3 - Gerenciamento de Tema com Contexto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Crie um ‘ThemeContext’ que armazene o estado do tema (claro ou escuro).
 
-Currently, two official plugins are available:
+- Crie um ‘ThemeProvider’ que forneça o tema para seus componentes filhos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Crie um componente que permita alternar entre temas e utilize o contexto para aplicar o tema escolhido.
